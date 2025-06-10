@@ -16,7 +16,7 @@ const Weather = () => {
     try {
       setLoading(true);
       const res = await axios.get(
-        `http://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${req || "Chandigarh"}`
+        `https://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${req || "Chandigarh"}`
       );
       setWeather(res.data);
       setDayNight(res.data.current.is_day);
